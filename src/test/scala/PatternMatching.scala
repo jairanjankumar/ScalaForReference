@@ -147,18 +147,4 @@ class PatternMatching extends FunSuite with Matchers {
 
   ///////////////////////////////////////////////////
 
-  test("Recursion") {
-
-    def recursion[A](count: Int, item: A): List[A] = {
-      count match {
-        case 0 => Nil
-        case n => item :: recursion(n - 1, item)
-      }
-    }
-
-    recursion(0, "item") should be (Nil)
-    recursion(1, 2) should be (List(2))
-    recursion(2, "item") should be (List("item", "item"))
-    recursion(3, true) should be (List(true, true, true))
-  }
 }
