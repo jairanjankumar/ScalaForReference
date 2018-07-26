@@ -6,7 +6,7 @@ object IfYouHateYourCoworker extends App {
   val isThisAQuestion_? = true
   println(s"isThisAQuestion_? :: ${isThisAQuestion_?}") //isThisAQuestion_? :: true
 
-  // variable name with spaces
+  // variable name with spaces and with backtick (`)
   val `Tell me your age !!` = 34
   println(s"Tell me your age !! :: ${`Tell me your age !!`}")  //Tell me your age !! :: 34
 
