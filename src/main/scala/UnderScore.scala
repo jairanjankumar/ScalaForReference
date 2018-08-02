@@ -1,5 +1,8 @@
 object UnderScore extends App{
 
+  // UnderScore is exploited in scala
+  // Here are code to demonstrate some of them
+
   //---------------------------
   def doubleInt(i : Int) = 2 * i
   def tripleInt(i: Int) = 3 * i
