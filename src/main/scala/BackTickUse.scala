@@ -41,16 +41,17 @@ object BackTickUse extends App {
     v.foreach {
       case `i` => newL += i
       case _ => {
-        l += newL.toList
+        if(!newL.isEmpty) l += newL.toList
         newL.clear()
       }
     }
-    l += newL.toList
+    if(!newL.isEmpty) l += newL.toList
 
     l.toList.filterNot(_.isEmpty)
   }
 
-  giveMeList(1)  // List(List(1, 1, 1, 1), List(1, 1), List(1, 1, 1))
+  val r3 = giveMeList(1)
+  println(r3) // List(List(1, 1, 1, 1), List(1, 1), List(1, 1, 1))
   //---------------------
 
 }
