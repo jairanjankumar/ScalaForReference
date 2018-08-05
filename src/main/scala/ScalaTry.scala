@@ -1,7 +1,10 @@
-import scala.util.{Try, Success, Failure}
+import utility.Utilities._
+
+import scala.util.{Failure, Success, Try}
 
 object ScalaTry extends App {
 
+  ---------
   def divide: Try[Int] = {
     val dividend: Int = 3
     val divisor: Int = 1
@@ -21,7 +24,7 @@ object ScalaTry extends App {
 
   divide
 
-
+  ---------
   //Worth to mention java style of Exception handling
   try {
     1 / 0
@@ -31,8 +34,5 @@ object ScalaTry extends App {
   finally {
     println("done with try")
   }
-
+  ---------
 }
-
-
-

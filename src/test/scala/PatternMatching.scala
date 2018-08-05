@@ -1,11 +1,12 @@
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.{FunSuite, Matchers}
+import utility.Utilities._
 
 @RunWith(classOf[JUnitRunner])
 class PatternMatching extends FunSuite with Matchers {
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test(" Integer ") {
 
@@ -13,7 +14,7 @@ class PatternMatching extends FunSuite with Matchers {
     x should be(10)
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test(" get from tuple ") {
 
@@ -22,7 +23,7 @@ class PatternMatching extends FunSuite with Matchers {
     y should be("text")
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test(" Getting the whole item along with individual items ") {
 
@@ -33,7 +34,7 @@ class PatternMatching extends FunSuite with Matchers {
     t should be(123, "text")
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test(" With an Option, Some ") {
 
@@ -41,7 +42,7 @@ class PatternMatching extends FunSuite with Matchers {
     x should be(10)
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test("_ is used for not interested element") {
 
@@ -57,7 +58,7 @@ class PatternMatching extends FunSuite with Matchers {
     val _: Int = 10
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test("Working with Lists") {
 
@@ -119,7 +120,7 @@ class PatternMatching extends FunSuite with Matchers {
     all should be(List(1, 2, 3, 4, 5))
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test("Tuple, match") {
 
@@ -134,7 +135,7 @@ class PatternMatching extends FunSuite with Matchers {
     output should be("Int 1 , double 2.0 and String text")
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
   test("Match Error") {
 
@@ -145,6 +146,6 @@ class PatternMatching extends FunSuite with Matchers {
     }
   }
 
-  ///////////////////////////////////////////////////
+  ---------
 
 }

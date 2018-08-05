@@ -1,19 +1,19 @@
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader
+import utility.Utilities._
 
 object SomeBasicsScala extends App {
 
-  // -------------
+  ---------
   // All below are same
   val b1: Byte = 40
   val b2 = 40: Byte
   val b3 = 40.asInstanceOf[Byte]
   val b4 = 40.toByte // convert Int to Byte
 
-  // -------------
+  ---------
   val result1 = 10 + 20
   val result2 = 10.+(20)
 
-  // -------------
+  ---------
   val e = 10
   val result3 =
     if (e > 10) "Greater than 10"
@@ -22,7 +22,7 @@ object SomeBasicsScala extends App {
 
   println(result3) //equal to 10
 
-  // -------------
+  ---------
 
   //y is the default parameter
   def defaultValueFun(x:Int, y:Int = 500) = {
@@ -34,7 +34,7 @@ object SomeBasicsScala extends App {
 
   val defaultPassed = defaultValueFun(100)
   println(s"defaultPassed :: $defaultPassed") // defaultPassed :: 600
-  // -------------
+  ---------
 
   val result4 = (1 to 10).toList
   println(result4) // List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -54,7 +54,7 @@ object SomeBasicsScala extends App {
   val alternateNum = for (i <- 1 to 10 by 2) yield i
   println(alternateNum) // Vector(1, 3, 5, 7, 9)
 
-  // -------------
+  ---------
   val l1 = Nil
   val l2 = List()
   //but good to create with Type
@@ -64,13 +64,13 @@ object SomeBasicsScala extends App {
   val l5 = 1 :: 2 :: 3 :: Nil
   val l6 = List(1,2,3)
 
-  // -------------
+  ---------
   // Null is only there in scala to interact with java code
   // Use option to avoid null in scala
   val o1: Option[String] = Some("text")
   val o2: Option[String] = None
 
-  // -------------
+  ---------
   val r1 = "this is a long text" +
             "and how to handle this"
 
@@ -95,7 +95,7 @@ object SomeBasicsScala extends App {
   // and how to handle this
   // even more
 
-  // -------------
+  ---------
 
   object thisIsAOject //already initialized!
 
@@ -106,7 +106,7 @@ object SomeBasicsScala extends App {
   a == b //object equality
   a eq b //reference equality
 
-  // -------------
+  ---------
   //Collections
   // Vector
   // Map
@@ -123,13 +123,11 @@ object SomeBasicsScala extends App {
   println(s"s1 :: $s1")  //Set(4, 3, 1) -- Duplicate will be removed
 
 
-  // -------------
+  ---------
   // just a tuple
   val t1 = (1, "One")
   val t2 = 1 -> "One"
-
-
-
+  ---------
 
 }
 

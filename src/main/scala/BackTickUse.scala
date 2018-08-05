@@ -1,9 +1,11 @@
 import scala.collection.mutable.ListBuffer
+import utility.Utilities._
 
 object BackTickUse extends App {
 
   // Some scala tricks if you hate your co-workers
 
+  ---------
   // just variable name
   val isThisAQuestion_? = true
   println(s"isThisAQuestion_? :: ${isThisAQuestion_?}") //isThisAQuestion_? :: true
@@ -26,7 +28,7 @@ object BackTickUse extends App {
   val `text/html` = 10
   println(s"text/html :: ${`text/html`}") // text/html :: 10
 
-  //---------------------
+  ---------
   // Given a List(1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 1, 1, 5, 2, 2, 1, 1, 1)
   // write a function to accept int and return List[List[Int]] as below
   // for 1, function should return List(List(1, 1, 1, 1), List(1, 1), List(1, 1, 1))
@@ -52,6 +54,6 @@ object BackTickUse extends App {
 
   val r3 = giveMeList(1)
   println(r3) // List(List(1, 1, 1, 1), List(1, 1), List(1, 1, 1))
-  //---------------------
+  ---------
 
 }

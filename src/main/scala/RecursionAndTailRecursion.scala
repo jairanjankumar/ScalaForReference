@@ -1,5 +1,8 @@
+import utility.Utilities._
+
 object RecursionAndTailRecursion extends App {
 
+  ---------
   // Recursion
   def recursion[A](count: Int, item: A): List[A] = {
     count match {
@@ -13,7 +16,7 @@ object RecursionAndTailRecursion extends App {
   println(recursion(1, 2)) // List(2)
   println(recursion(2, "item")) // List("item", "item")
   println(recursion(3, true)) // List(true, true, true)
-
+  ---------
 
   // Tail Recursion
   // in Tail Recursion, before calling itself there should not be any pending task
@@ -26,7 +29,7 @@ object RecursionAndTailRecursion extends App {
         case n => tailRecursionHelper(n - 1, item, item :: acc)
       }
     }
-    tailRecursionHelper(1, item, Nil)
+    tailRecursionHelper(count, item, Nil)
   }
 
   println(s"\nTAIL RECURSION")
@@ -34,5 +37,5 @@ object RecursionAndTailRecursion extends App {
   println(tailRecursion(1, 2)) // List(2)
   println(tailRecursion(2, "item")) // List("item", "item")
   println(tailRecursion(3, true)) // List(true, true, true)
-
+  ---------
 }
