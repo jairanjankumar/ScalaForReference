@@ -1,3 +1,4 @@
+import com.sun.codemodel.internal.JStringLiteral
 import utility.Utilities._
 
 object SomeBasicsScala extends App {
@@ -23,9 +24,19 @@ object SomeBasicsScala extends App {
   println(result3) //equal to 10
 
   ---------
+  //String Interpolator
+  val si = 10
+  println(s"si value $si")
+  println(s"Si plus one value ${si + 1}")
+
+  println(raw" with raw String \n Interpolator") // \n - treated as simple string
+  println(" without raw String \n Interpolator") // \n - new line
+
+  println(f"${scala.math.Pi}%2.2f")
+  ---------
 
   //y is the default parameter
-  def defaultValueFun(x:Int, y:Int = 500) = {
+  def defaultValueFun(x: Int, y: Int = 500) = {
     x + y //last evaluated statement
   }
 
@@ -42,7 +53,7 @@ object SomeBasicsScala extends App {
   val result5 = (10 to 1 by -1).toList
   println(result5) // List(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
 
-  for(i <- 1 to 10) {
+  for (i <- 1 to 10) {
     println(i)
   }
 
@@ -58,11 +69,11 @@ object SomeBasicsScala extends App {
   val l1 = Nil
   val l2 = List()
   //but good to create with Type
-  val l3 : List[String] = Nil
+  val l3: List[String] = Nil
   val l4 = List[String]()
 
   val l5 = 1 :: 2 :: 3 :: Nil
-  val l6 = List(1,2,3)
+  val l6 = List(1, 2, 3)
 
   ---------
   // Null is only there in scala to interact with java code
@@ -72,11 +83,12 @@ object SomeBasicsScala extends App {
 
   ---------
   val r1 = "this is a long text" +
-            "and how to handle this"
+    "and how to handle this"
 
   println(s"r1 :: $r1") // r1 :: this is a long textand how to handle this
 
-  val r2 = """this is a long text
+  val r2 =
+    """this is a long text
               and how to handle this"""
 
   println(s"r2 :: $r2")
@@ -89,7 +101,7 @@ object SomeBasicsScala extends App {
       |and how to handle this
       |even more""".stripMargin
 
-  println(s"r3 :: $r3")  // this will well formated with new line
+  println(s"r3 :: $r3") // this will well formated with new line
   // so r2 will be printed as below
   // r3 :: this is a long text
   // and how to handle this
@@ -112,7 +124,7 @@ object SomeBasicsScala extends App {
   // Map
   // Set
 
-  val vector = Vector(1,2,3,4)
+  val vector = Vector(1, 2, 3, 4)
 
   // All below are same
   val m1: Map[Int, String] = Map.apply((1, "One"), (2, "Two"))
@@ -120,8 +132,7 @@ object SomeBasicsScala extends App {
   val m3: Map[Int, String] = Map(1 -> "One", 2 -> "Two")
 
   val s1 = Set(4, 3, 1, 3)
-  println(s"s1 :: $s1")  //Set(4, 3, 1) -- Duplicate will be removed
-
+  println(s"s1 :: $s1") //Set(4, 3, 1) -- Duplicate will be removed
 
   ---------
   // just a tuple
@@ -130,4 +141,3 @@ object SomeBasicsScala extends App {
   ---------
 
 }
-
