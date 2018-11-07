@@ -16,7 +16,7 @@ object UnderScore extends App {
   def quadrupleInt(i: Int) = 4 * i
   val numList = List(1, 2, 3, 4, 5)
 
-  val funList: List[(Int) => Int] = numList.flatMap {
+  val funList: List[Int => Int] = numList.flatMap {
     case 2 => List(doubleInt _)
     case 3 => List(tripleInt _)
     case 4 => List(quadrupleInt _)
@@ -29,4 +29,9 @@ object UnderScore extends App {
   println(s"result :: $result") // result :: 60
   ---------
 
+  val k: Option[Int] = Some(1)
+  k match {
+    case Some(a) => println(a)
+    case None => println("None")
+  }
 }
